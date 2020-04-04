@@ -1,18 +1,13 @@
-package com.linh.observerpattern
+package com.linh.observerpattern.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import com.linh.observerpattern.R
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
+import org.koin.android.ext.android.inject
 
 class MainActivity : AppCompatActivity() {
-    private val viewModel = MainViewModel()
+    private val viewModel : MainViewModel by inject()
 
     init {
         viewModel.getPosts()
@@ -24,6 +19,5 @@ class MainActivity : AppCompatActivity() {
 
         viewModel.attach(textView_main_observableTextView)
     }
-
 
 }
