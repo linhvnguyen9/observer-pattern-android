@@ -1,4 +1,4 @@
-package com.linh.observerpattern
+package com.linh.observerpattern.domain.entity
 
 data class Post(
     val userId: Int,

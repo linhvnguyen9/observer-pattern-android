@@ -1,4 +1,6 @@
-package com.linh.observerpattern
+package com.linh.observerpattern.common.utils.observer
+
+import com.linh.observerpattern.common.utils.observer.Observer
 
 abstract class Subject {
     private val observers = ArrayList<Observer>()
